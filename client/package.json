@@ -1,0 +1,36 @@
+{
+  "name": "toto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "watchify src/app.js -o src/bundle.js -v",
+    "build": "browserify src/app.js | uglifyjs -cm > src/bundle.min.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "gulp": "^3.9.1",
+    "gulp-html-replace": "^1.6.0",
+    "gulp-streamify": "^1.0.2",
+    "gulp-uglify": "^1.5.3",
+    "reactify": "^1.1.1",
+    "uglify-js": "^2.6.2",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "d3": "^3.5.17",
+    "flux": "^2.1.1",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "remarkable": "^1.6.2"
+  },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  }
+}
